@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Thu May  9 06:41:36 2019
 
-@author: ahora
-"""
 
 __all__ = [
     'pyversion',
