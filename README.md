@@ -13,6 +13,9 @@ Implementing Elliptic-curve Based on Curve P-19,NIST FIPS 186-4 Standard
         gy=174050332293622031404857552280219410364023488927386650641
         ng=6277101735386680763835789423176059013767194773182842284081
 
+# notice
+Implementing RSA basics and not safe Against some attack. 
+
 # I use
 
 For generation prime:
