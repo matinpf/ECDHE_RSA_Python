@@ -84,7 +84,7 @@ class ECDHE_RSA:
                 (bx1,by2)=self.addition(bx1,by2,gx1,gy1)  
         return(bx1,by2)
         
-    ##print("2")
+    #print("2")
     #to do : check d not 0
     #d=secrets.randbelow(n-1)
     #b=baby(23,self.gx,self.gy)
