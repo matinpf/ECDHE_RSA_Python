@@ -3,8 +3,6 @@ Ephemeral Elliptic-curve Diffie–Hellman with RSA Signature implementation in p
 
 This is one of my homework in the security protocol course
 
-main : test.py
-
 # Curve P-192
 Implementing Elliptic-curve Based on Curve P-19,NIST FIPS 186-4 Standard
 
