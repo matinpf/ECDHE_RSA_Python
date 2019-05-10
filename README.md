@@ -1,7 +1,7 @@
 # Overview
 Ephemeral Elliptic-curve Diffie–Hellman with RSA Signature implementation in python
 
-this is one of my homework in security protocol course
+This is one of my homework in the security protocol course
 
 maine : test.py
 
