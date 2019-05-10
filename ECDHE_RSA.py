@@ -297,8 +297,8 @@ class ECDHE_RSA:
     def in_Curve(self,gx1,gy1):
         x=((gx1**3)-(3*gx1)+self.b)%self.p
         y=(gy1**2)%self.p
-        print(x,y)
-        print(gx1,gy1)
+        #print(x,y)
+        #print(gx1,gy1)
         if x==y :
             return True
         else :
