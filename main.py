@@ -9,7 +9,7 @@ from ECDHE_RSA import ECDHE_RSA
 
 
 matin = ECDHE_RSA("matin")
-print(matin.baby(23,matin.gx,matin.gy))
+#print(matin.baby(23,matin.gx,matin.gy))
 mohamad = ECDHE_RSA("mohamad")
 
 #matin key genaration
@@ -55,3 +55,7 @@ print("matin share key:")
 print(matin_sharekey)
 print("mohahmad share key:")
 print(mohamad_sharekey)
+
+print("check point in curve ?")
+#for test +1 any one!!
+print(matin.in_Curve(matin_sharekey[0],matin_sharekey[1]))
