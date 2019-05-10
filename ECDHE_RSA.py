@@ -2,7 +2,7 @@
 """
 Created on Wed May  8 12:39:28 2019
 
-@author: Matin fallahi
+@author: Matin Fallahi
 """
 #safe randome
 import secrets
@@ -92,6 +92,8 @@ class ECDHE_RSA:
     #end of dp
     def gen_ECkeypair(self):
         d=secrets.randbelow(self.ng-1)
+        #print("d:")
+        #print(d)
         dpub=self.baby(d,self.gx,self.gy)
         return d,dpub 
     
@@ -290,6 +292,18 @@ class ECDHE_RSA:
         M=int(m.hexdigest(),16)
         return M
     
+    #check point in curve ?
+    #dont use windows calculator !! test with https://defuse.ca/big-number-calculator.htm
+    def in_Curve(self,gx1,gy1):
+        x=((gx1**3)-(3*gx1)+self.b)%self.p
+        y=(gy1**2)%self.p
+        print(x,y)
+        print(gx1,gy1)
+        if x==y :
+            return True
+        else :
+            return False
+        
     #print(hash_info(bytes("matin", 'utf-8')))
     #m= public hsdh(prametr EC)   
     #def rsaA(m):
