@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Thu May  9 06:35:17 2019
 
-@author: Matin Fallahi
-"""
 
 import itertools
 import logging
