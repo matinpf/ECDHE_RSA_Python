@@ -15,10 +15,14 @@ mohamad = ECDHE_RSA("mohamad")
 #matin key genaration
 ma_rsa_private,ma_rsa_public,ma_rsa_n=matin.rsakeygenarate()
 ma_d,ma_dpub=matin.gen_ECkeypair()
+print("\n\nmatin private d:")
+print(ma_d)
 
 #mohamad key genaration
 mo_rsa_private,mo_rsa_public,mo_rsa_n=mohamad.rsakeygenarate()
 mo_d,mo_dpub=mohamad.gen_ECkeypair()
+print("\nmohamad private d:")
+print(mo_d)
 
 #matin sign public EC parametr
 ma_dpub_hash=matin.hash_info(str(ma_dpub[0]),str(ma_dpub[1]))
@@ -34,7 +38,7 @@ mo_sing_dpub=mohamad.ras_sign(mo_dpub_hash,mo_rsa_private,mo_rsa_n)
 #matin verify rsa_sign
 mo_dpub_hash_recive=matin.hash_info(str(mo_dpub[0]),str(mo_dpub[1]))
 sign_result_matin=matin.rsa_verification(mo_sing_dpub,mo_rsa_public,mo_rsa_n,mo_dpub_hash_recive)
-print("matin verify rsa_sign:")
+print("\n\nmatin verify rsa_sign:")
 print(sign_result_matin)
 #matin Generation sharekey
 matin_sharekey=matin.gen_ECkeyAg(mo_dpub,ma_d)
@@ -44,18 +48,18 @@ matin_sharekey=matin.gen_ECkeyAg(mo_dpub,ma_d)
 ma_dpub_hash_recive=matin.hash_info(str(ma_dpub[0]),str(ma_dpub[1]))
 #for test ma_sing_dpub+1
 sign_result_mohahmad=matin.rsa_verification(ma_sing_dpub,ma_rsa_public,ma_rsa_n,ma_dpub_hash_recive)
-print("mohamad verify rsa_sign:")
+print("\nmohamad verify rsa_sign:")
 print(sign_result_mohahmad)
 #mohamad Generation sharekey
 #for test mo_d+1
 mohamad_sharekey=mohamad.gen_ECkeyAg(ma_dpub,mo_d)
 
 
-print("matin share key:")
+print("\n\nmatin share key:")
 print(matin_sharekey)
-print("mohahmad share key:")
+print("\nmohahmad share key:")
 print(mohamad_sharekey)
 
-print("check point in curve ?")
+print("\n\ncheck point in curve ?")
 #for test +1 any one!!
 print(matin.in_Curve(matin_sharekey[0],matin_sharekey[1]))
