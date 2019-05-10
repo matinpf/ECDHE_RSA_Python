@@ -256,7 +256,7 @@ class ECDHE_RSA:
     def rsakeygenarate(self):
         #test with https://www.dcode.fr/primality-test
         #qr , pr =gen_pq(1024)
-        #!!!!!!!!! slow speed
+        #!!!!!!!!! slow speed for prime 2048 - use defult prime or other algorithms
         qr , pr =self.gen_pq(1024)
         n=qr*pr
         phy=(qr-1)*(pr-1)
