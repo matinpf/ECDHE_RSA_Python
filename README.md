@@ -16,12 +16,11 @@ Implementing Elliptic-curve Based on Curve P-19,NIST FIPS 186-4 Standard
 # Notice
 Implementing RSA basics and not secure Against any attack.
 
+SHA-1 is no longer considered a secure cryptographic hash function. Researchers now believe that finding a hash collision.
+https://shattered.io/
+
 # I use
 
 For generation prime:
 
 https://github.com/Inndy/python-rsa/blob/master/prime.py
-
-For Extended Euclidean algorithm:
-
-https://en.wikibooks.org/wiki/Algorithm_Implementation/Mathematics/Extended_Euclidean_algorithm

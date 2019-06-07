@@ -5,24 +5,25 @@ Created on Thu May  9 15:03:13 2019
 @author: Matin Fallahi
 """
 from ECDHE_RSA import ECDHE_RSA
-#import abade2
 
 
 matin = ECDHE_RSA("matin")
-#print(matin.baby(23,matin.gx,matin.gy))
+#print(matin.DoubleandAdd(23,matin.gx,matin.gy))
 mohamad = ECDHE_RSA("mohamad")
+
+
 
 #matin key genaration
 ma_rsa_private,ma_rsa_public,ma_rsa_n=matin.rsakeygenarate()
 ma_d,ma_dpub=matin.gen_ECkeypair()
 print("\n\nmatin private d:")
-print(ma_d)
+print(ma_d,ma_dpub)
 
 #mohamad key genaration
 mo_rsa_private,mo_rsa_public,mo_rsa_n=mohamad.rsakeygenarate()
 mo_d,mo_dpub=mohamad.gen_ECkeypair()
 print("\nmohamad private d:")
-print(mo_d)
+print(mo_d,mo_dpub)
 
 #matin sign public EC parametr
 ma_dpub_hash=matin.hash_info(str(ma_dpub[0]),str(ma_dpub[1]))
@@ -45,9 +46,9 @@ matin_sharekey=matin.gen_ECkeyAg(mo_dpub,ma_d)
 
 
 #mohamad verify rsa_sign
-ma_dpub_hash_recive=matin.hash_info(str(ma_dpub[0]),str(ma_dpub[1]))
+ma_dpub_hash_recive=mohamad.hash_info(str(ma_dpub[0]),str(ma_dpub[1]))
 #for test ma_sing_dpub+1
-sign_result_mohahmad=matin.rsa_verification(ma_sing_dpub,ma_rsa_public,ma_rsa_n,ma_dpub_hash_recive)
+sign_result_mohahmad=mohamad.rsa_verification(ma_sing_dpub,ma_rsa_public,ma_rsa_n,ma_dpub_hash_recive)
 print("\nmohamad verify rsa_sign:")
 print(sign_result_mohahmad)
 #mohamad Generation sharekey
