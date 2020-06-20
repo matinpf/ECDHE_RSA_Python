@@ -1,7 +1,13 @@
 # Overview
-Ephemeral Elliptic-curve Diffie–Hellman with RSA Signature implementation in python
 
-This is one of my homework in the security protocol course
+The security protocols course was exiting in master. I did two programming homework for it course. One of them is the implementation of Ephemeral Elliptic-curve Diffie–Hellman with RSA Signature with python in the form of a class. ECDHE is a key agreement protocol that provides forward secrecy. In this project, I used P-19,NIST FIPS 186-4 Standard curve. In the following was explained function one by one.
+
+"xgcd": calculate modular inverse using the extended euclidean algorithm.
+
+"DoubleandAdd": for a multiple of a point that takes advantage of doubling and addition algorithm.
+
+"gen_ECkeypair": in this function generate private and public key pair key, which the variable "d" is the private key, and "dpub" is the public key. as you know no one can extract "d" from "dpub". in fact, obtain "d" from "dpub" is a hard problem.
+
 
 # Curve P-192
 Implementing Elliptic-curve Based on Curve P-19,NIST FIPS 186-4 Standard
