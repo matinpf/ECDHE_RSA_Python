@@ -1,6 +1,6 @@
 # Overview
 
-The security protocols course was exiting in master. I did two programming homework for it course. One of them is the implementation of Ephemeral Elliptic-curve Diffie–Hellman with RSA Signature with python in the form of a class. ECDHE is a key agreement protocol that provides forward secrecy. In this project, I used P-19,NIST FIPS 186-4 Standard curve. In the following was explained function one by one.
+The security protocols course was exiting in master. I did two programming homework for it course. One of them is the implementation of Ephemeral Elliptic-curve Diffie–Hellman with RSA Signature with python in the form of a class. ECDHE is a key agreement protocol that provides forward secrecy. In this project, I used P-192 curve, which is NIST Standard. In the following was explained function one by one.
 
 "xgcd": calculate modular inverse using the extended euclidean algorithm.
 
