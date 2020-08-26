@@ -20,9 +20,9 @@ Implementing Elliptic-curve Based on Curve P-19,NIST FIPS 186-4 Standard
         ng=6277101735386680763835789423176059013767194773182842284081
 
 # Notice
-Implementing RSA basics and not secure Against any attack.(not RSA-PSS)
+Implementing is RSA basic and not secure Against any attack.(not RSA-PSS)
 
-SHA-1 is no longer considered a secure cryptographic hash function. Researchers now believe that finding a hash collision.
+SHA-1 is no longer considered as secure cryptographic hash function. Researchers now believe that finding a hash collision.
 https://shattered.io/
 
 # I use
